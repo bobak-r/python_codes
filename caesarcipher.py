@@ -5,7 +5,7 @@ from tkinter.messagebox import YES
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
             'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-
+#encrpt function 
 def encrypt(text, shift):
     if shift > 26:
         shift %= 26
@@ -26,7 +26,7 @@ def encrypt(text, shift):
       
     print(f"The encoded text is:{cipher_text}")
 
-
+#decrypt function 
 def decrypt(text, shift):
     if shift > 26:
         shift %= 26
