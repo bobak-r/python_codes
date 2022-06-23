@@ -28,7 +28,8 @@ def calculate_score(getcards):
           if  getcards[i]==11:
               getcards[i]=1
               total=sum(getcards)
-              break      
+              break
+         
     return total
 def computerdecide():
     state=0
@@ -74,6 +75,10 @@ def compare():
         print (computer_cards)
         print (user_cards)
         print("lose")
+    elif calculate_score(user_cards)==dec:
+        print(computer_cards)
+        print(user_cards)
+        print("draw")
     if input("do you wnat continue plese Enter y :")=="y":
         user_cards.clear()
         computer_cards.clear()
