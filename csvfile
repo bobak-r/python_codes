@@ -1,0 +1,11 @@
+import csv
+host=[["name","version","status","users"],
+      ["MailTree","5.34","production","324"],["CalDoor","1.25.1","beta","22"]
+      ,["Chatty Chicken","0.34","alpha","4"]]
+with open ('software.csv' , 'w+') as software:
+    writer=csv.writer(software)
+    writer.writerows(host)
+    software.seek(0)
+    reader = csv.DictReader(software)
+    for row in reader:
+        print(("{}has {} users").format(row["name"],row["users"]))
